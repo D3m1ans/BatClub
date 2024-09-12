@@ -1,0 +1,38 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Batman - The Dark Knight
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'cards/css/card_main.css' %}">
+<section class="cards">
+
+    <h1>{{card.name}}</h1>
+    <div class="container desc">
+        <h2>Description</h2>
+<!--        <div class="mini-card">-->
+<!--            <img src="{% static 'cards/img/Batman-card-arcticle.jpg' %}" alt="Batman">-->
+<!--        </div>-->
+        <p>{{card.description}}</p>
+    </div>
+    <div class="container backgroundstory">
+        <h2>Background</h2>
+        <p>{{card.background}}</p>
+    </div>
+    <div class="container appearance">
+        <h2>Appearance</h2>
+        <h3>Batman</h3>
+
+    </div>
+    <div class="container skills">
+        <h2>Skills</h2>
+        <p>{{card.skills}}</p>
+    </div>
+
+</section>
+
+
+{% endblock %}

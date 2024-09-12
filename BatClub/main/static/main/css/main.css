@@ -1,0 +1,39 @@
+body{
+    background-color: whitesmoke;
+}
+
+header img {
+    width: 100px;
+
+}
+
+header .logo{
+    font-size: 40px;
+    margin-left: 5px;
+    position: relative;
+    top: +7px;
+    color: black;
+}
+
+header a {
+    text-decoration: none;
+}
+
+footer img {
+    width: 30px;
+}
+
+div .col{
+    border-radius: 10px;
+    text-align: center;
+}
+
+div .col img{
+    border-radius: 6px;
+    height: 700px;
+    width: auto;
+}
+
+div .col button{
+    width: 100%;
+}

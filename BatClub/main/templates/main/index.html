@@ -1,0 +1,115 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1>BatFamily</h1>
+            <p class="lead text-body-secondary">
+            </p>
+            <p class="lead text-body-secondary">
+                Hi) On this site you'll learn all about each member of the BatFamily,
+                their biography, adventures, and their strengths and weaknesses. The site features all the latest news
+                about our heroes, and you can write an article about your favorite hero right here and now. We look
+                forward to seeing you)
+            </p>
+            <p>
+                <a href="" class="btn btn-primary my-2">Suggest a news item</a>
+                <a href="" class="btn btn-secondary my-2">My articles</a>
+            </p>
+        </div>
+    </div>
+</section>
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/Batman-card.jpg'%}" alt="batman-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Batman - The Dark Knight.
+                        </p>
+                        <div>
+                            <a href="{% url 'batman-card' %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/Nightwing-card.jpg'%}" alt="Nightwing-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Nightwing - The First Robin.
+                        </p>
+                        <p class="card-text">
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/RedHood-card.jpg'%}" alt="redhood-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Red Hood - The Resurrected Robin.</p>
+                        <p class="card-text">
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/RedRobin-card.jpg'%}" alt="batman-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Red Robin - The Master Detective.
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/Robin-card.jpg'%}" alt="batman-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Robin - Son of Batman.
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'cards/img/Batgirl-card.jpg'%}" alt="batman-card">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Batgirl - Gotham's Dark Princess.
+                        </p>
+                        <div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

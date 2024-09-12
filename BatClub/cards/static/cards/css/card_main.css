@@ -1,0 +1,24 @@
+.cards h1{
+    text-align: center;
+}
+
+.cards h2{
+    font-weight: bold;
+}
+
+.cards p{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.mini-card{
+    width: 200px;
+    text-align: center;
+    float: right;
+}
+
+.mini-card img{
+    width: 100%;
+    height: auto;
+}
