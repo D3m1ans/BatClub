@@ -17,7 +17,7 @@
         </div>
         <div class="card-profile">
             <div class="card-image">
-                <img src="{% static 'cards/img/Batman-profile.jpg' %}" alt="Batman-profile">
+                <img src="{% static 'cards/img/Nightwing-profile.jpg' %}" alt="Nightwing-profile">
             </div>
             <div class="card-info">
                 <p><strong>Name:</strong> {{ card.name }}</p>
@@ -34,20 +34,20 @@
     </div>
     <div class="container appearance">
         <h2>Appearance</h2>
-        <h3>Batman</h3>
+        <h3>Nightwing</h3>
         <p>{{ hero_part }}</p>
-        <h3>Bruce Wayne</h3>
+        <h3>Dick Grayson</h3>
         <p>{{ person_part }}</p>
     </div>
     <div class="container skills">
         <h2>Skills</h2>
-        <p>Batman has several key abilities and skills that help him fight crime:</p>
+        <p>Nightwing has a wide range of abilities that make him an outstanding hero and effective defender. Here are the main ones:</p>
         <ol>
             {% for skill in skills %}
                 <li>{{ skill }}</li>
             {% endfor %}
         </ol>
-        <p>Although Batman has no superpowers, his training, intelligence, and resources make him one of the most effective heroes in comics.</p>
+        <p>These abilities make Nightwing not only an outstanding hero, but also a complex and multifaceted individual capable of handling any challenge that comes his way.</p>
     </div>
     <div class="container allies">
         <h2>Allies</h2>

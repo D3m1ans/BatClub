@@ -9,7 +9,7 @@ def card_batman(request):
     card = get_object_or_404(Card, id=2)
 
     appearance = card.appearance
-    parts = appearance.split('Bruce Wayne:')
+    parts = appearance.split(f'{card.alterego}:')
     hero_part = parts[0].strip()
     person_part = parts[1].strip()
 
@@ -40,7 +40,7 @@ def card_nightwing(request):
     card = get_object_or_404(Card, id=3)
 
     appearance = card.appearance
-    parts = appearance.split('Dick Grayson')
+    parts = appearance.split('Dick Grayson:')
     hero_part = parts[0].strip()
     person_part = parts[1].strip()
 
