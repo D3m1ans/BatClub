@@ -1,3 +1,36 @@
+.container.desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.desc-content {
+    width: 80%; /* Описание занимает 65% пространства */
+}
+
+.card-profile {
+    width: 20%; /* Карточка занимает 30% пространства */
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Отступ между карточкой и описанием */
+}
+
+.card-image img {
+    max-width: 100%; /* Изображение адаптируется под ширину карточки */
+    border-radius: 8px;
+}
+
+.card-info {
+    margin-top: 10px;
+}
+
+.card-info p {
+    margin: 5px 0; /* Отступы между строками характеристик */
+}
+
 .cards h1{
     text-align: center;
 }
@@ -12,13 +45,7 @@
     margin-bottom: 20px;
 }
 
-.mini-card{
-    width: 200px;
-    text-align: center;
-    float: right;
-}
-
-.mini-card img{
-    width: 100%;
-    height: auto;
+.cards li{
+    font-size: 18px;
+    margin-bottom: 10px;
 }
