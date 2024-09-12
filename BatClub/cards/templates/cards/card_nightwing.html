@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    Batman - The Dark Knight
+    {{card.name}}
 {% endblock %}
 
 {% block content %}
@@ -44,7 +44,7 @@
         <p>Batman has several key abilities and skills that help him fight crime:</p>
         <ol>
             {% for skill in skills %}
-                <li>{{ skill|linebreaks }}</li>
+                <li>{{ skill }}</li>
             {% endfor %}
         </ol>
         <p>Although Batman has no superpowers, his training, intelligence, and resources make him one of the most effective heroes in comics.</p>

@@ -1,3 +1,22 @@
+.cards h1{
+    text-align: center;
+}
+
+.cards h2{
+    font-weight: bold;
+}
+
+.cards p{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cards li{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 .container.desc {
     display: flex;
     justify-content: space-between;
@@ -6,11 +25,11 @@
 }
 
 .desc-content {
-    width: 80%; /* Описание занимает 65% пространства */
+    width: 70%; /* Описание занимает 65% пространства */
 }
 
 .card-profile {
-    width: 20%; /* Карточка занимает 30% пространства */
+    width: 30%; /* Карточка занимает 30% пространства */
     padding: 15px;
     background-color: #f4f4f4;
     border-radius: 10px;
@@ -29,23 +48,17 @@
 
 .card-info p {
     margin: 5px 0; /* Отступы между строками характеристик */
-}
-
-.cards h1{
-    text-align: center;
-}
-
-.cards h2{
-    font-weight: bold;
-}
-
-.cards p{
-    margin-top: 20px;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.cards li{
     font-size: 18px;
-    margin-bottom: 10px;
+}
+
+.skills ol p{
+    font-size: 18px;
+}
+
+.allies ol p{
+    font-size: 18px;
+}
+
+.enemises ol p{
+    font-size: 18px;
 }
