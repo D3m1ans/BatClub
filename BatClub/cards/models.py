@@ -13,8 +13,9 @@ class Card(models.Model):
     skills = models.TextField('Способности')
     background = models.TextField('Предыстория')
     appearance = models.TextField('Внешность')
-    alliess = models.TextField('Союзники')
-    enemises = models.TextField('Враги')
+    allies = models.TextField('Союзники')
+    enemies = models.TextField('Враги')
+    photo = models.ImageField(upload_to='photos/', null=True, blank=True)
 
     def __str__(self):
         return self.name

@@ -26,6 +26,7 @@ class Migration(migrations.Migration):
                 ('appearance', models.TextField(verbose_name='Внешность')),
                 ('alliess', models.TextField(verbose_name='Союзники')),
                 ('enemises', models.TextField(verbose_name='Враги')),
+                ('photo', models.ImageField(verbose_name='Фото'))
             ],
         ),
     ]
