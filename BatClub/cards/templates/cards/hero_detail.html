@@ -1,0 +1,74 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    Batman - The Dark Knight
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'cards/css/card_main.css' %}">
+<section class="cards">
+    <h1>{{card.name}}</h1>
+    <div class="container desc">
+        <div class="desc-content">
+            <h2>Description</h2>
+            <p>{{ card.description|linebreaks }}</p>
+        </div>
+        <div class="card-profile">
+            <div class="card-image">
+                <img src="{% static 'cards/img/Batman-profile.jpg' %}" alt="Batman-profile">
+            </div>
+            <div class="card-info">
+                <p><strong>Name:</strong> {{ card.name }}</p>
+                <p><strong>Real Name:</strong> {{ card.alterego }}</p>
+                <p><strong>Debut:</strong> {{ card.debut }}</p>
+                <p><strong>Gender:</strong> {{ card.gender }}</p>
+                <p><strong>Occupation:</strong> {{ card.occupation }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container backgroundstory">
+        <h2>Background</h2>
+        <p>{{ card.background|linebreaks }}</p>
+    </div>
+    <div class="container appearance">
+        <h2>Appearance</h2>
+        <h3>Batman</h3>
+        <p>{{ hero_part }}</p>
+        <h3>Bruce Wayne</h3>
+        <p>{{ person_part }}</p>
+    </div>
+    <div class="container skills">
+        <h2>Skills</h2>
+        <p>Batman has several key abilities and skills that help him fight crime:</p>
+        <ol>
+            {% for skill in skills %}
+                <li>{{ skill|linebreaks }}</li>
+            {% endfor %}
+        </ol>
+        <p>Although Batman has no superpowers, his training, intelligence, and resources make him one of the most effective heroes in comics.</p>
+    </div>
+    <div class="container allies">
+        <h2>Allies</h2>
+        <p>Batman has a number of important allies who help him fight crime and support him both in his personal life and in his fight against crime. Here are brief descriptions of his main allies:</p>
+        <ol>
+            {% for allie in allies %}
+                <li>{{ allie|linebreaks }}</li>
+            {% endfor %}
+        </ol>
+        <p>These allies play an important role in Batman's operations, helping him deal with threats and maintain order in Gotham City.</p>
+    </div>
+    <div class="container enemises">
+        <h2>Enemies</h2>
+        <p>Batman has many well-known enemies, each with unique traits and posing different threats to Gotham City. Here are the main ones:</p>
+        <ol>
+            {% for enemy in enemies %}
+                <li>{{ enemy|linebreaks }}</li>
+            {% endfor %}
+        </ol>
+        <p>These enemies not only threaten Batman, but also challenge his principles, forcing him to constantly fight not only crime, but also his inner demons.</p>
+    </div>
+</section>
+
+{% endblock %}

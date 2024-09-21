@@ -28,89 +28,22 @@
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
+            {% for object in objects %}
+                <div class="col">
                 <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/Batman-card.jpg'%}" alt="batman-card">
+                    <img src="{{object.photo.url}}" alt="{{object.name}}">
                     <div class="card-body">
                         <p class="card-text">
-                            Batman - The Dark Knight.
+                            {{object.name}}
                         </p>
                         <div>
-                            <a href="{% url 'batman-card' %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                            <a href="{% url 'hero-detail' object.id %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/Nightwing-card.jpg'%}" alt="Nightwing-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Nightwing - The First Robin.
-                        </p>
-                        <p class="card-text">
-                        </p>
-                        <div>
-                            <a href="{% url 'nightwing-card' %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/RedHood-card.jpg'%}" alt="redhood-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Red Hood - The Resurrected Robin.</p>
-                        <p class="card-text">
-                        </p>
-                        <div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/RedRobin-card.jpg'%}" alt="batman-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Red Robin - The Master Detective.
-                        </p>
-                        <div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/Robin-card.jpg'%}" alt="batman-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Robin - Son of Batman.
-                        </p>
-                        <div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{% static 'cards/img/Batgirl-card.jpg'%}" alt="batman-card">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Batgirl - Gotham's Dark Princess.
-                        </p>
-                        <div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-    <img src="{{ object.photo.url }}" alt="img">
 </div>
 {% endblock %}

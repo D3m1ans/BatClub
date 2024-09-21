@@ -4,9 +4,9 @@ from cards.models import Card
 # Create your views here.
 
 def index(request):
-    object = Card.objects.first()
+    objects = Card.objects.all()
     data = {
         'title': 'BatClub',
-        'object': object,
+        'objects': objects,
     }
     return render(request, 'main/index.html', data)
