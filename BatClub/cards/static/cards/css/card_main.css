@@ -51,14 +51,19 @@
     font-size: 18px;
 }
 
-.skills ol p{
+.appearance {
     font-size: 18px;
 }
 
-.allies ol p{
+
+.skills p{
     font-size: 18px;
 }
 
-.enemises ol p{
+.allies p{
+    font-size: 18px;
+}
+
+.enemises  p{
     font-size: 18px;
 }

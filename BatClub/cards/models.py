@@ -4,7 +4,8 @@ from django.db import models
 # Create your models here.
 
 class Card(models.Model):
-    name = models.CharField('Имя', max_length=100)
+    title = models.CharField('Заголовок', max_length=100, null=True, blank=True)
+    hero_name = models.CharField('Имя', max_length=100, null=True, blank=True)
     alterego = models.CharField('Альтер эго', max_length=100)
     debut = models.DateField('Год появления')
     gender = models.CharField('Пол', max_length=100)
@@ -16,6 +17,7 @@ class Card(models.Model):
     allies = models.TextField('Союзники')
     enemies = models.TextField('Враги')
     photo = models.ImageField(upload_to='photos/', null=True, blank=True)
+    photo_profile = models.ImageField(upload_to='photos/', null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.title

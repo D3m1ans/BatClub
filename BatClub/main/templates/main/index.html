@@ -31,10 +31,10 @@
             {% for object in objects %}
                 <div class="col">
                 <div class="card shadow-sm">
-                    <img src="{{object.photo.url}}" alt="{{object.name}}">
+                    <img src="{{object.photo.url}}" alt="{{object.title}}">
                     <div class="card-body">
                         <p class="card-text">
-                            {{object.name}}
+                            {{object.title}}
                         </p>
                         <div>
                             <a href="{% url 'hero-detail' object.id %}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
