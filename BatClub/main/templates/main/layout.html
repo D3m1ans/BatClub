@@ -32,8 +32,17 @@
                 <li><a href="" class="nav-link px-2">News</a></li>
             </ul>
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                {% if user.is_authenticated %}
+                    {{user.username}}<br>
+                    {% csrf_token %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-primary me-2">Logout</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}"><button type="button" class="btn btn-outline-primary me-2">Login</button></a>
+                    <a href="#"><button type="button" class="btn btn-primary">Sign-up</button></a>
+                {% endif %}
             </div>
         </header>
     </div>
