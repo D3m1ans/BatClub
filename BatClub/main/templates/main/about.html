@@ -1,0 +1,75 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+<section class="text-center container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h2>What you'll find on our website</h2>
+            <p class="lead mb-5">
+                We aim to collect all the most interesting stories and facts about Batman, Robin, Batgirl, Nightwing, Red
+            Hood and other heroes to share with our audience. Here you'll find detailed character descriptions, their
+            roles on the team, and the latest news and theories about comics, movies, and games.
+            </p>
+        </div>
+    </div>
+    <div class="row feature-container d-flex">
+        <div class="col-md-6 feature">
+            <div class="feature-icon">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <h3>Hero biographies</h3>
+            <p>
+                Learn details about the background, personal lives, and superpowers of each member of the Batfamily.
+            </p>
+        </div>
+        <div class="col-md-6 feature">
+            <div class="feature-icon">
+                <i class="bi bi-book-half"></i>
+            </div>
+            <h3>Stories of confrontations</h3>
+            <p>
+                Immerse yourself in the thrilling stories of the Batsamy's fight against crime and their interactions with each other.
+            </p>
+        </div>
+
+        <div class="col-md-6 feature">
+            <div class="feature-icon">
+                <i class="bi bi-film"></i>
+            </div>
+            <h3>Analyzing comic books, movies, and games</h3>
+            <p>
+                Reviews and in-depth analysis of various media materials related to Batsamy.
+            </p>
+        </div>
+        <div class="col-md-6 feature">
+               <div class="feature-icon">
+                   <i class="bi bi-newspaper"></i>
+               </div>
+            <h3>Latest news</h3>
+            <p>
+                 Stay up to date on all new products, releases and events related to Batsamy.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="container cta-section">
+    <div class="container">
+        <h2>Join the BatClub</h2>
+        <p class="lead">
+            Get access to exclusive content, news, and theorizing. Become part of our friendly team of Batman fans and allies!
+        </p>
+        <a href="{% url 'register' %}" class="cta-button">Sign Up</a>
+    </div>
+</section>
+
+
+{% endblock %}
